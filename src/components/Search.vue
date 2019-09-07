@@ -35,7 +35,7 @@ export default {
     movie: '',
     nameRules: [
       v => !!v || 'film name is required',
-      v => v.length > 5 || 'film name must be less than 5 characters',
+      v => v.length > 5 || 'film name must be not fewer than 5 characters',
     ],
     movies: [],
     movie: ""
