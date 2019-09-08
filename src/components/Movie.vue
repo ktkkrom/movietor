@@ -1,7 +1,7 @@
 
 <template>
 <v-card class="mx-auto" max-width="600">
-  <v-img class="white--text" height="200px" :src="posterPath" :alt="title" width="100">
+  <v-img class="white--text" height="200px" :src="posterPath" width="100">
     <div>{{title}}</div>
   </v-img>
 
