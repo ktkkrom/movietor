@@ -66,26 +66,26 @@ export default {
 
 
 <template lang="html">
-<div class="">
-  <v-form v-model="valid">
-        <v-col cols="12" md="4">
-          <v-text-field v-model="movie" :rules="nameRules" :counter="5" label="film name" required></v-text-field>
-            <v-btn :disabled="!valid" color="success" class="mr-4" @click="validate">search</v-btn>
-            <!-- why not green?? -->
-        </v-col>
-  </v-form>
-  <div v-for="movie in movies" class="main-div">
-    <Movie
-      :popularity="movie.popularity"
-      :overview="movie.overview"
-      :title="movie.title"
-      :voteAverage="movie.vote_average"
-      :posterPath="movie.poster_path"
-      />
-  </div>
-</div>
-</template>
+    <div class="">
+    <v-form v-model="valid">
+          <v-col cols="12" md="4">
+            <v-text-field v-model="movie" :rules="nameRules" :counter="5" label="film name" required></v-text-field>
+              <v-btn :disabled="!valid" color="success" class="mr-4" @click="validate">search</v-btn>
 
+              <!-- why not green?? -->
+            </v-col>
+    </v-form>
+    <div v-for="movie in movies" class="main-div">
+      <Movie
+        :popularity="movie.popularity"
+        :overview="movie.overview"
+        :title="movie.title"
+        :voteAverage="movie.vote_average"
+        :posterPath="movie.poster_path"
+        />
+    </div>
+  </div>
+</template>
 
 <script>
 import axios from 'axios';
